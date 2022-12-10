@@ -15,7 +15,7 @@
         <!-- Navbar -->
         <nav class="navbar navbar-light bg-light">
             <div class="container-fluid">
-              <a class="navbar-brand" href="index.html">
+              <a class="navbar-brand" href="index.php">
                 CRUD - BS5
               </a>
             </div>
@@ -58,8 +58,18 @@
 
               <div class="mb-3 row mt-4">
                 <div class="col">
+                  <?php 
+                      if(isset($_GET['ubah'])){
+                  ?>
+                      <a href="#" type="button" class="btn btn-success btn-sm"><i class="fa fa-floppy-o" aria-hidden="true"></i> Simpan</a>
+                  <?php 
+                    }else{
+                  ?>
                     <a href="#" type="button" class="btn btn-success btn-sm"><i class="fa fa-floppy-o" aria-hidden="true"></i> Tambahkan</a>
-                    <a href="index.html" type="button" class="btn btn-danger btn-sm"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i> Batal</a>
+                  <?php 
+                    }
+                  ?>
+                    <a href="index.php" type="button" class="btn btn-danger btn-sm"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i> Batal</a>
                 </div>
             </div>
         </div>
