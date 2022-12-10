@@ -6,6 +6,9 @@
         <!-- Bootstrap -->
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <script src="js/bootstrap.bundle.min.js"></script>
+        <!-- Fontawesome -->
+        <link rel="stylesheet" href="fontawesome/css/font-awesome.min.css">
+
         <title>Crud Sekolah - Sederhana</title>
     </head>
     <body>
@@ -29,9 +32,9 @@
               CRUD <cite title="Source Title">Create Read Update Delete</cite>
             </figcaption>
         </figure>
-        <button type="button" class="btn btn-primary">Tambah Data</button>
-            <div class="table-responsive">
-                <table class="table align-middle">
+        <button type="button" class="btn btn-primary mb-3"><i class="fa fa-plus"></i> Tambah Data</button>
+            <div class="table-responsive table-bordered">
+                <table class="table align-middle table-hover">
                     <thead>
                         <tr>
                             <th>No.</th>
@@ -45,17 +48,31 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td>1.</td>
+                            <td><center>1.</center></td>
                             <td>112233</td>
-                            <td>Abdulloh Alfa</td>
+                            <td>Jamaludin</td>
                             <td>Laki-laki</td>
                             <td>
                                 <img src="img/img1.jpg" alt="Foto siswa 1" style="width: 100px;">
                             </td>
                             <td>Jl. Bandung jaya</td>
                             <td>
-                                <button type="button" class="btn btn-success btn-sm">Ubah</button>
-                                <button type="button" class="btn btn-danger btn-sm">Hapus</button>
+                                <button type="button" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i> Ubah</button>
+                                <button type="button" class="btn btn-danger btn-sm"> <i class="fa fa-trash"></i> Hapus</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><center>2.</center></td>
+                            <td>112233</td>
+                            <td>Abdulloh Alfa</td>
+                            <td>Laki-laki</td>
+                            <td>
+                                <img src="img/img2.jpg" alt="Foto siswa 1" style="width: 100px;">
+                            </td>
+                            <td>Jl. Bandung jaya</td>
+                            <td>
+                                <button type="button" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i> Ubah</button>
+                                <button type="button" class="btn btn-danger btn-sm"> <i class="fa fa-trash"></i> Hapus</button>
                             </td>
                         </tr>
                     </tbody>
