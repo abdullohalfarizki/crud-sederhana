@@ -62,7 +62,7 @@
                         <td>Jl. Bandung jaya</td>
                         <td>
                             <a href="kelola.php?ubah=1" type="button" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i></a>
-                            <button type="button" class="btn btn-danger btn-sm"> <i class="fa fa-trash"></i></button>
+                            <a href="proses.php?hapus=1" type="button" class="btn btn-danger btn-sm"> <i class="fa fa-trash"></i></a>
                         </td>
                     </tr>
                     <tr>
@@ -78,7 +78,7 @@
                         <td>Jl. Bandung jaya</td>
                         <td>
                             <a href="kelola.php?ubah=2" type="button" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i></a>
-                            <button type="button" class="btn btn-danger btn-sm"> <i class="fa fa-trash"></i></button>
+                            <a href="proses.php?hapus=2" type="button" class="btn btn-danger btn-sm"> <i class="fa fa-trash"></i></a>
                         </td>
                     </tr>
                 </tbody>

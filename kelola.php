@@ -23,7 +23,8 @@
 
         <!-- Form -->
         <div class="container">
-            <div class="mb-3 row mt-3">
+          <form method="POST" action="proses.php">
+          <div class="mb-3 row mt-3">
                 <label for="nisn" class="col-sm-2 col-form-label">NISN</label>
                 <div class="col-sm-4">
                   <input type="text" class="form-control" id="nisn" placeholder="ex: 112233">
@@ -61,17 +62,18 @@
                   <?php 
                       if(isset($_GET['ubah'])){
                   ?>
-                      <a href="#" type="button" class="btn btn-success btn-sm"><i class="fa fa-floppy-o" aria-hidden="true"></i> Simpan</a>
+                      <button type="submit" name="aksi" value="edit" class="btn btn-success btn-sm"><i class="fa fa-floppy-o" aria-hidden="true"></i> Simpan</button>
                   <?php 
                     }else{
                   ?>
-                    <a href="#" type="button" class="btn btn-success btn-sm"><i class="fa fa-floppy-o" aria-hidden="true"></i> Tambahkan</a>
+                    <button type="submit" name="aksi" value="add" class="btn btn-success btn-sm"><i class="fa fa-floppy-o" aria-hidden="true"></i> Tambahkan</button>
                   <?php 
                     }
                   ?>
                     <a href="index.php" type="button" class="btn btn-danger btn-sm"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i> Batal</a>
                 </div>
-            </div>
+              </div>
+          </form>
         </div>
     </body>
 </html>
