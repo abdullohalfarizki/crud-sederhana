@@ -15,10 +15,53 @@
         <!-- Navbar -->
         <nav class="navbar navbar-light bg-light">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">
+              <a class="navbar-brand" href="index.html">
                 CRUD - BS5
               </a>
             </div>
         </nav>
+
+        <!-- Form -->
+        <div class="container">
+            <div class="mb-3 row mt-3">
+                <label for="nisn" class="col-sm-2 col-form-label">NISN</label>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control" id="nisn" placeholder="ex: 112233">
+                </div>
+              </div>
+            <div class="mb-3 row mt-3">
+                <label for="nama" class="col-sm-2 col-form-label">Nama Siswa</label>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control" id="nama" placeholder="ex: Abdul aziz">
+                </div>
+              </div>
+
+            <div class="mb-3 row mt-3">
+                <label for="jenis_kelamin" class="col-sm-2 col-form-label">Jenis Kelamin</label>
+                <div class="col-sm-4">
+                  <input type="text" class="form-control" id="jenis_kelamin" placeholder="ex: Laki-laki">
+                </div>
+              </div>
+
+              <div class="mb-3 row mt-3">
+                <label for="foto" class="col-sm-2 col-form-label">Foto Siswa</label>
+                <div class="col-sm-4">
+                    <input class="form-control" type="file" id="foto">
+                </div>
+              </div>
+              <div class="mb-3 row mt-3">
+                <label for="alamat" class="col-sm-2 col-form-label">Alamat Lengkap</label>
+                <div class="col-sm-4">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Jl. Jati bening"></textarea>
+                </div>
+              </div>
+
+              <div class="mb-3 row mt-4">
+                <div class="col">
+                    <a href="#" type="button" class="btn btn-success btn-sm"><i class="fa fa-floppy-o" aria-hidden="true"></i> Tambahkan</a>
+                    <a href="index.html" type="button" class="btn btn-danger btn-sm"><i class="fa fa-arrow-circle-o-left" aria-hidden="true"></i> Batal</a>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
