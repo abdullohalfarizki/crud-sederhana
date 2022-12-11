@@ -1,4 +1,31 @@
 <!DOCTYPE html>
+
+    <?php
+      include 'koneksi.php';
+
+      $nisn = '';
+      $nama_siswa = '';
+      $jenis_kelamin = '';
+      $alamat = '';
+
+      if (isset($_GET['ubah'])) {
+          $id_siswa = $_GET['ubah'];
+
+          $query = "SELECT * FROM tb_siswa WHERE id_siswa = '$id_siswa';";
+          $sql = mysqli_query($conn, $query);
+
+          $result = mysqli_fetch_assoc($sql);
+
+          $nisn = $result['nisn'];
+          $nama_siswa = $result['nama_siswa'];
+          $jenis_kelamin = $result['jenis_kelamin'];
+          $alamat = $result['alamat'];
+
+      }
+    ?>
+
+
+
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -27,23 +54,23 @@
           <div class="mb-3 row mt-3">
                 <label for="nisn" class="col-sm-2 col-form-label">NISN</label>
                 <div class="col-sm-4">
-                  <input required type="number" name="nisn" class="form-control" id="nisn" placeholder="ex: 112233">
+                  <input required type="number" name="nisn" class="form-control" id="nisn" placeholder="ex: 112233" value="<?php echo $nisn; ?>">
                 </div>
               </div>
             <div class="mb-3 row mt-3">
                 <label for="nama" class="col-sm-2 col-form-label">Nama Siswa</label>
                 <div class="col-sm-4">
-                  <input required type="text" class="form-control" name="nama" id="nama">
+                  <input required type="text" class="form-control" name="nama" id="nama" value="<?php echo $nama_siswa; ?>">
                 </div>
               </div>
 
             <div class="mb-3 row mt-3">
-                <label for="jenis_kelamin" class="col-sm-2 col-form-label">Jenis Kelamin</label>
+                <label for="jkel" class="col-sm-2 col-form-label">Jenis Kelamin</label>
                 <div class="col-sm-4">
-                  <select required type="text" class="form-select" name="jenis_kelamin" id="jenis_kelamin">
-                    <option selected></option>
-                    <option value="Laki-laki">Laki-laki</option>
-                    <option value="Perempuan">Perempuan</option>
+                  <select  required id="jkel" name="jenis_kelamin" class="form-select">
+                      <option selected><?php echo $jenis_kelamin; ?></option>
+                      <option value="Laki-laki">Laki-laki</option>
+                      <option value="Perempuan">Perempuan</option>
                   </select>
                 </div>
               </div>
@@ -57,7 +84,7 @@
               <div class="mb-3 row mt-3">
                 <label for="alamat" class="col-sm-2 col-form-label">Alamat Lengkap</label>
                 <div class="col-sm-4">
-                    <textarea required class="form-control" name="alamat" id="alamat" rows="3" placeholder="Jl. Jati bening"></textarea>
+                    <textarea required class="form-control" name="alamat" id="alamat" rows="3" placeholder="Jl. Jati bening"><?php echo $alamat; ?></textarea>
                 </div>
               </div>
 
