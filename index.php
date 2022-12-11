@@ -1,3 +1,13 @@
+<?php
+    include 'koneksi.php';
+
+    $query = "SELECT * FROM tb_siswa";
+    $sql = mysqli_query($conn, $query);
+
+    $no = 0;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,38 +59,30 @@
                     </tr>
                 </thead>
                 <tbody>
+                <?php
+                    while($result = mysqli_fetch_assoc($sql)){
+                ?>
                     <tr>
                         <td>
-                            <center>1.</center>
+                        <center>
+                            <?php echo ++$no; ?>.
+                        </center>
                         </td>
-                        <td>112233</td>
-                        <td>Jamaludin</td>
-                        <td>Laki-laki</td>
+                        <td><?php echo $result['nisn']; ?></td>
+                        <td><?php echo $result['nama_siswa']; ?></td>
+                        <td><?php echo $result['jenis_kelamin']; ?></td>
                         <td>
-                            <img src="img/img1.jpg" alt="Foto siswa 1" style="width: 100px;">
+                            <img src="img/<?php echo $result['foto_siswa']; ?>" style="width: 100px;">
                         </td>
-                        <td>Jl. Bandung jaya</td>
+                        <td><?php echo $result['alamat']; ?></td>
                         <td>
-                            <a href="kelola.php?ubah=1" type="button" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i></a>
-                            <a href="proses.php?hapus=2" type="button" class="btn btn-danger btn-sm"> <i class="fa fa-trash"></i></a>
+                            <a href="kelola.php?ubah=<?php echo $result['id_siswa']; ?>" type="button" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i></a>
+                            <a href="proses.php?hapus=<?php echo $result['id_siswa']; ?>" type="button" class="btn btn-danger btn-sm"> <i class="fa fa-trash"></i></a>
                         </td>
                     </tr>
-                    <tr>
-                        <td>
-                            <center>2.</center>
-                        </td>
-                        <td>112233</td>
-                        <td>Abdulloh Alfa</td>
-                        <td>Laki-laki</td>
-                        <td>
-                            <img src="img/img2.jpg" alt="Foto siswa 1" style="width: 100px;">
-                        </td>
-                        <td>Jl. Bandung jaya</td>
-                        <td>
-                            <a href="kelola.php?ubah=1" type="button" class="btn btn-success btn-sm"><i class="fa fa-pencil"></i></a>
-                            <a href="proses.php?hapus=2" type="button" class="btn btn-danger btn-sm"> <i class="fa fa-trash"></i></a>
-                        </td>
-                    </tr>
+                    <?php 
+                        }
+                    ?>
                 </tbody>
             </table>
         </div>
