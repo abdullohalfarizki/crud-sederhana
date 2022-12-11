@@ -23,24 +23,24 @@
 
         <!-- Form -->
         <div class="container">
-          <form method="POST" action="proses.php">
+          <form method="POST" action="proses.php" enctype="multipart/form-data">
           <div class="mb-3 row mt-3">
                 <label for="nisn" class="col-sm-2 col-form-label">NISN</label>
                 <div class="col-sm-4">
-                  <input type="number" name="nisn" class="form-control" id="nisn" placeholder="ex: 112233">
+                  <input required type="number" name="nisn" class="form-control" id="nisn" placeholder="ex: 112233">
                 </div>
               </div>
             <div class="mb-3 row mt-3">
                 <label for="nama" class="col-sm-2 col-form-label">Nama Siswa</label>
                 <div class="col-sm-4">
-                  <input type="text" class="form-control" name="nama" id="nama" placeholder="ex: Abdul aziz">
+                  <input required type="text" class="form-control" name="nama" id="nama">
                 </div>
               </div>
 
             <div class="mb-3 row mt-3">
                 <label for="jenis_kelamin" class="col-sm-2 col-form-label">Jenis Kelamin</label>
                 <div class="col-sm-4">
-                  <select type="text" class="form-select" name="jenis_kelamin" id="jenis_kelamin">
+                  <select required type="text" class="form-select" name="jenis_kelamin" id="jenis_kelamin">
                     <option selected></option>
                     <option value="Laki-laki">Laki-laki</option>
                     <option value="Perempuan">Perempuan</option>
@@ -51,13 +51,13 @@
               <div class="mb-3 row mt-3">
                 <label for="foto" class="col-sm-2 col-form-label">Foto Siswa</label>
                 <div class="col-sm-4">
-                    <input class="form-control" type="file" name="foto" id="foto">
+                    <input required class="form-control" type="file" name="foto" id="foto" accept="image/*">
                 </div>
               </div>
               <div class="mb-3 row mt-3">
                 <label for="alamat" class="col-sm-2 col-form-label">Alamat Lengkap</label>
                 <div class="col-sm-4">
-                    <textarea class="form-control" name="alamat" id="alamat" rows="3" placeholder="Jl. Jati bening"></textarea>
+                    <textarea required class="form-control" name="alamat" id="alamat" rows="3" placeholder="Jl. Jati bening"></textarea>
                 </div>
               </div>
 
