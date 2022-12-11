@@ -27,33 +27,37 @@
           <div class="mb-3 row mt-3">
                 <label for="nisn" class="col-sm-2 col-form-label">NISN</label>
                 <div class="col-sm-4">
-                  <input type="text" class="form-control" id="nisn" placeholder="ex: 112233">
+                  <input type="number" name="nisn" class="form-control" id="nisn" placeholder="ex: 112233">
                 </div>
               </div>
             <div class="mb-3 row mt-3">
                 <label for="nama" class="col-sm-2 col-form-label">Nama Siswa</label>
                 <div class="col-sm-4">
-                  <input type="text" class="form-control" id="nama" placeholder="ex: Abdul aziz">
+                  <input type="text" class="form-control" name="nama" id="nama" placeholder="ex: Abdul aziz">
                 </div>
               </div>
 
             <div class="mb-3 row mt-3">
                 <label for="jenis_kelamin" class="col-sm-2 col-form-label">Jenis Kelamin</label>
                 <div class="col-sm-4">
-                  <input type="text" class="form-control" id="jenis_kelamin" placeholder="ex: Laki-laki">
+                  <select type="text" class="form-select" name="jenis_kelamin" id="jenis_kelamin">
+                    <option selected></option>
+                    <option value="Laki-laki">Laki-laki</option>
+                    <option value="Perempuan">Perempuan</option>
+                  </select>
                 </div>
               </div>
 
               <div class="mb-3 row mt-3">
                 <label for="foto" class="col-sm-2 col-form-label">Foto Siswa</label>
                 <div class="col-sm-4">
-                    <input class="form-control" type="file" id="foto">
+                    <input class="form-control" type="file" name="foto" id="foto">
                 </div>
               </div>
               <div class="mb-3 row mt-3">
                 <label for="alamat" class="col-sm-2 col-form-label">Alamat Lengkap</label>
                 <div class="col-sm-4">
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Jl. Jati bening"></textarea>
+                    <textarea class="form-control" name="alamat" id="alamat" rows="3" placeholder="Jl. Jati bening"></textarea>
                 </div>
               </div>
 
